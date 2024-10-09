@@ -14,6 +14,7 @@ const Card = (props)=>{
                        
                             <p>{p.name}</p>
                             <p>{p.description}</p>
+                            <p>$ {p.price/100}</p>
                             <p>{p.color}</p>
                             <button>Add</button>
 

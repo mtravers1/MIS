@@ -4,10 +4,10 @@ import '../styles/home.css'
 import Slider from "../components/slider";
 import c1 from '../photos/c1.png'
 import c2 from '../photos/c2.png'
-
+import Login from "./login";
 import c3 from '../photos/c3.png'
 import c4 from '../photos/c4.jpg'
-
+import { Link } from "react-router-dom";
 import Footer from "../components/footer";
 const Home = ()=>{
     return(
@@ -26,12 +26,12 @@ const Home = ()=>{
                 <h1>Winter 2024 Collection</h1>
             </span> */}
             <div id="banner">
-                <span id='bannerleft'>
+                <div id='bannerleft'>
                     <h1>Winter Colleciton 2024</h1>
                     <h2>Get ready for the deadly Winter with the new line for Move in Silence</h2>
                     <h3>Get 10% off with your puchcase </h3>
-                    <button id='bannerleftbutton'>Shop Now</button>
-                </span>
+                    <button id='bannerleftbutton'><Link id='shopnow' to='/browse'>Shop</Link></button>
+                </div>
                 {/* <span id='bannerright'> */}
                     {/* <img src=""/> */}
                 <Slider/>
@@ -55,17 +55,17 @@ const Home = ()=>{
         <div >
             <div id='boxes'>
             <span id='box1'>
-                <p>New</p>
+                <Link>New</Link>
             </span>
             <span  id='box2'>
-            <p>Featured</p>            </span>
+            <Link>Featured</Link>            </span>
 
             </div>
             <div id='boxes'>
             <span  id='box3'>
-            <p>Deals</p>            </span>
+            <Link>Deals</Link>            </span>
             <span  id='box4'>
-            <p>Cooming Soon</p>            </span>
+            <Link>Cooming Soon</Link>            </span>
             </div>
           
             

@@ -9,9 +9,24 @@ body {
   color: red;
   background-image: url('./photos/skull.jpg');
   background-size: cover;
+  font-family: 'Times New Roman', Times, serif
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button{
+  height: 30px;
+  width: 30%;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: red;
+  border-radius: 5px;
+  border: 2px solid black;
+  cursor: pointer;
+
 }

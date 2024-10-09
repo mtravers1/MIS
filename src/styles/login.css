@@ -1,0 +1,52 @@
+#signup{
+    padding:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title{
+    font-size: 65px;
+}
+a{
+    font-size: 36px;
+    text-decoration: none;
+    color:red;
+    cursor: pointer;
+    margin:50px;
+    margin-top:50px
+}
+#title span{
+    font-weight: bold;
+    font-size: 65px;
+    font-weight: bold;
+}
+
+
+#log{
+    display: flex;
+    margin-top: 200px;
+  
+}
+
+#log input{
+    color:red;
+    background-color: black;
+    border:none;
+    height: 50px;
+    margin:10px;
+    border-bottom: 4px solid red;
+    width:500px;
+
+}
+@media(max-width:600px){
+    #log{
+        flex-direction: column;
+        color: white;
+    }
+
+    #log input{
+        margin-top:20px
+    }
+}
