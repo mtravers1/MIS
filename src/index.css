@@ -9,7 +9,7 @@ body {
   color: red;
   background-image: url('https://static.wixstatic.com/media/448c6a_34f4b37feaa24008bd4198f6ac29e785~mv2.gif');
   background-position: center;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
   font-family: 'Times New Roman', Times, serif
 

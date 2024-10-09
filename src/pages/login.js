@@ -15,7 +15,7 @@ const Login = ()=>{
             <div>
                 <span >
                     {/* <p id='title'>Move In Silence</p> */}
-                    <img id='logo' src={logo}/>
+                    <img id='logolog' src={logo}/>
                 </span>
 
             </div>
