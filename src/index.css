@@ -7,7 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* background-color: black; */
   color: red;
-  background-image: url('https://media3.giphy.com/media/RUqHwpO1yfhVo2e0CX/200.webp?cid=ecf05e47uhjhigpkhuacvgx3d0mpz13fyvk8lc3xabdeo41z&ep=v1_gifs_search&rid=200.webp&ct=g');
+  background-image: url('https://static.wixstatic.com/media/448c6a_34f4b37feaa24008bd4198f6ac29e785~mv2.gif');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Times New Roman', Times, serif

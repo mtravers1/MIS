@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/login.css'
 import { Link } from "react-router-dom";
-
+import logo from '../photos/MISLOGO.png'
 const Login = ()=>{
     return(
         <div>
@@ -14,7 +14,8 @@ const Login = ()=>{
             <div id='signup'>
             <div>
                 <span >
-                    <p id='title'>Move In Silence</p>
+                    {/* <p id='title'>Move In Silence</p> */}
+                    <img id='logo' src={logo}/>
                 </span>
 
             </div>

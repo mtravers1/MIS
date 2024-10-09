@@ -6,7 +6,10 @@
     flex-direction: column;
     color: white;
 }
-
+#logo{
+    height: 200px;
+    width:400px
+}
 #title{
     font-size: 65px;
 }
