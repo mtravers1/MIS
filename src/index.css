@@ -7,7 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* background-color: black; */
   color: red;
-  background-image: url('./photos/skull.jpg');
+  background-image: url('https://media3.giphy.com/media/RUqHwpO1yfhVo2e0CX/200.webp?cid=ecf05e47uhjhigpkhuacvgx3d0mpz13fyvk8lc3xabdeo41z&ep=v1_gifs_search&rid=200.webp&ct=g');
+  background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Times New Roman', Times, serif
 
