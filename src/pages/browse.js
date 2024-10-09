@@ -7,6 +7,18 @@ import Footer from "../components/footer";
 import { useState } from "react";
 const Browse = ()=>{
     const [toggle, SetToggle]=useState(false)
+    const [category, SetCategory]=useState('')
+    console.log(category)
+   
+    let hat='Hats'
+    let hoodie='Hoodies'
+   
+    let bottoms='Bottoms'
+    let tops='Shirts'
+    product.filter((a)=>{
+        a.category=category
+        console.log(a.category)
+    })
     return(
         <div>
             <Nav/>
@@ -14,14 +26,15 @@ const Browse = ()=>{
             
             <button onClick={()=>SetToggle(!toggle)}>Categorey</button>
             {toggle && (
-                <div>
-                    <p>Hats</p>  
-                    <p>Hoodies</p>
-                    <p>Shirts</p>  
-                    <p>bottoms</p>                
+                <div id='category'>
+                    <p onClick={()=>SetCategory(hat)}>Hats</p>  
+                    <p onClick={()=>SetCategory(hoodie)}>Hoodies</p>
+                    <p OnClick={()=>SetCategory(tops)}>Shirts</p>  
+                    <p onClick={()=>SetCategory(bottoms)}>bottoms</p>                
                 </div>
             )}
             <div id="cards" > 
+               
          
                 <Card products={product}/>
             </div>

@@ -21,7 +21,7 @@ import model9 from '../photos/model/model8.jpg'
 const Slider = ()=>{
     let images=[model1, model2, model3, model4, model5, model5, model6]
     const [index, setIndex] = useState(0);
-    const delay = 5000;
+    const delay = 3000;
 
 
   useEffect(() => {

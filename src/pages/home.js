@@ -34,6 +34,7 @@ const Home = ()=>{
                 </div>
                 {/* <span id='bannerright'> */}
                     {/* <img src=""/> */}
+                
                 <Slider/>
                 {/* </span> */}
             </div>

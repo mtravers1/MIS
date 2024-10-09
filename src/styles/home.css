@@ -22,8 +22,8 @@
     padding: 100px 100px 10px;
 }
 #bannerleftbutton{
-    height: 30px;
-    width: 30%;
+    height: 40px;
+    width: 40%;
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
@@ -128,6 +128,10 @@
         /* width: 40%; */
         background-color: black;
         padding: 0px;
+    }
+
+    #bannerleftbutton{
+        margin-bottom: 40px;
     }
 
     #boxes p{

@@ -3,3 +3,16 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+#category{
+    
+    display: flex;
+    font-size: 24px;
+    flex-direction: column;
+    font-weight: bolder;
+}
+#category p{
+    padding: 5px;
+    margin:5px
+
+}

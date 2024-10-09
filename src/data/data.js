@@ -13,7 +13,8 @@ let product =[
         description:'',
         color:'red',
         size:'XL',
-        quantity:2
+        quantity:2, 
+        category:'Hat'
 
     },
     {
@@ -24,7 +25,8 @@ let product =[
         description:'',
         color:'red',
         size:'M',
-        quantity:2
+        quantity:2, 
+        category:'Hat'
 
     },
     {
@@ -35,7 +37,8 @@ let product =[
         description:'',
         color:'red',
         size:'M',
-        quantity:2
+        quantity:2, 
+        category:'Hat'
 
     },
     {
@@ -46,7 +49,8 @@ let product =[
         description:'',
         color:'red',
         size:'M',
-        quantity:2
+        quantity:2, 
+        category:'Bottoms'
 
     },
     {
@@ -57,7 +61,8 @@ let product =[
         description:'',
         color:'red',
         size:'M',
-        quantity:2
+        quantity:2, 
+        category:'Shirts'
 
     }
     
