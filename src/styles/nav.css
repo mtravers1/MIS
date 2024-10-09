@@ -1,0 +1,68 @@
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 150px;
+}
+
+#links{
+    display: flex;
+    justify-content: space-between;
+}
+#cart{
+    width: 50px;
+    height: 50px;
+}
+#links a{
+    margin:10px;
+    text-decoration: none;
+    color: red;
+    font-size: 24px;
+}
+
+#links a:hover{
+    color: white;
+    cursor: pointer;
+}
+
+#mobile{
+    display: none;
+}
+
+
+
+
+@media(max-width:600px){
+    #mobile img{
+       height: 100px;
+
+    }
+
+    #mobile{
+        display: flex;
+        flex-direction: column;
+        color:red;
+        font-size: 24px;
+    }
+
+    #mobile span{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    #mobile span a{
+        text-decoration: none;
+        color:red
+    }
+
+
+    #nav{
+        display: none;
+    }
+}

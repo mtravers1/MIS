@@ -1,0 +1,18 @@
+#cardimg{
+    width:300px
+}
+
+#card{
+    width: 370px;
+    background-color: white;
+    margin:10px;
+    border-radius: 10px;
+    border: 2px solid black
+}
+
+
+
+#card div{
+    padding: 10px;
+
+}

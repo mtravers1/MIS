@@ -1,0 +1,112 @@
+#banner{
+    height: 300px;
+    background-color: whitesmoke;
+}
+
+#main{
+    margin-top: 40px;
+    font-size: 24px;
+    height: 400px;
+}
+
+#banner{
+    height: 500px;
+    display: flex;
+    margin-top: 50px;
+
+}
+
+#bannerleft{
+    width: 100%;
+    background-color: black;
+    padding: 100px 100px 10px;
+}
+#bannerleftbutton{
+    height: 30px;
+    width: 30%;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#boxes{
+    display: flex;
+    justify-content: center;
+}
+
+#boxes span{
+    width: 50%;
+    border: 1px solid black;
+    margin:10px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#box1{
+    background-image: url('../photos/c1.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    cursor: pointer;
+
+}
+#box2{
+    background-image: url('../photos/c2.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+
+    cursor: pointer;
+
+}
+#box3{
+    background-image: url('../photos/c3.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    cursor: pointer;
+
+
+}
+#box4{
+    background-image: url('../photos/c4.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    cursor: pointer;
+
+}
+
+@media(max-width:600px){
+    #banner{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    
+    }
+    
+    #bannerleft{
+        /* width: 40%; */
+        background-color: black;
+        padding: 0px;
+    }
+}
