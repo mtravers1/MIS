@@ -10,6 +10,33 @@ import c4 from '../photos/c4.jpg'
 import { Link } from "react-router-dom";
 import Footer from "../components/footer";
 const Home = ()=>{
+
+
+    
+//   let url='http://localhost:5000/products'
+//   fetch(url).
+//   then(res=>res.json()).
+//   then(data=>console.log(data))
+    // fetch(url).then(res=>res.json).then(data=>console.log(data))
+
+    // fetch(url, {
+    //     method:'GET',
+    //     headers:{
+    //         'Content-Type': 'application/json'
+    //     },
+    // })
+
+    // const url='localhost:5000/products'
+    // fetch(url, {
+    //     method:'GET',
+    //     mode:'cors',
+    //     headers:{
+    //         'Content-Type':'application/json'
+    //     },
+
+    // })
+
+    // fetch(url).then(res=>res.json()).then(data=>console.log(data))
     return(
         <div className="App">
         {/* <header className="App-header">
