@@ -32,7 +32,19 @@
     display: none;
 }
 
+#cartnumber{
+    position: relative;
+    left: 35px;
+    top: -30px;
+}
 
+#cartprev{
+    position: fixed;
+    height: -webkit-fill-available;
+    background: white;
+    right: 0px;
+    overflow: auto;
+}
 
 
 @media(max-width:600px){
@@ -46,6 +58,13 @@
         flex-direction: column;
         color:red;
         font-size: 24px;
+    }
+    #mobileimg{
+        width: 80%;
+    }
+
+    #mobilebutton{
+        width: 20%;
     }
 
     #mobile span{

@@ -54,7 +54,7 @@ let product =[
 
     },
     {
-        id:5,
+        id:6,
         name:'MIS Chelsea Tee',
         price:3500,
         photo:tee,

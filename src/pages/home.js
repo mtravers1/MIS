@@ -9,8 +9,12 @@ import c3 from '../photos/c3.png'
 import c4 from '../photos/c4.jpg'
 import { Link } from "react-router-dom";
 import Footer from "../components/footer";
+import axios from "axios";
 const Home = ()=>{
 
+    const url='http://localhost:5000/order'
+
+    // axios.get(url).then((res)=>res.json()).catch(error=>console.log(error))
 
     
 //   let url='http://localhost:5000/products'

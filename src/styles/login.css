@@ -1,5 +1,5 @@
 #signup{
-    padding:100px;
+   
     display:flex;
     justify-content: center;
     align-items: center;
@@ -9,6 +9,16 @@
 #logolog{
     height: 200px;
     width:400px
+}
+#logoreg{
+    height: 200px;
+    width:400px;
+   
+}
+#logimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #title{
     font-size: 65px;
@@ -30,11 +40,29 @@ a{
 
 #log{
     display: flex;
-    margin-top: 200px;
+    margin-top: 100px;
   
 }
 
 #log input{
+    color:red;
+    background-color: black;
+    border:none;
+    height: 50px;
+    margin:10px;
+    border-bottom: 4px solid red;
+    width:500px;
+
+}
+#register{
+    display: flex;
+    margin-top: 150px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#register input{
     color:red;
     background-color: black;
     border:none;

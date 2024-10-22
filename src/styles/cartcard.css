@@ -1,0 +1,16 @@
+
+
+#cartcard{
+    display: flex;
+    
+}
+#cartcard button{
+    width: 100%;
+}
+#cartimg{
+    width: 200px;
+}
+
+#removebutton{
+
+}

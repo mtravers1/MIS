@@ -5,18 +5,40 @@ import Login from "../pages/login";
 import { CgShoppingCart } from "react-icons/cg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Cart from "../data/cart";
+import '../styles/cartcard.css'
+import { CartState } from "../context-reducer/context";
+import CartCards from "./cartCards";
 const Nav = ()=>{
+    const {state:{cart}, dispatch}=CartState()
     const [toggle, SetToggle]=useState(false)
+
+    const [carttog, setCarttog]=useState(false)
+    const cartButton = ()=>{
+        console.log('hello')
+        setCarttog(!carttog)
+    }
+
+    let price=0
+    cart.forEach((i)=>{
+        price+=i.price
+        
+    })
+    console.log(price)
     return(
 <div>
+    
     <div id="mobile">
-        <img onClick={()=>SetToggle(!toggle)} src={logo}/>
-        
+       
+        <img id='mobileimg' onClick={()=>SetToggle(!toggle)} src={logo}/>
+        <CgShoppingCart id='cart' onClick={()=>cartButton()}/>
+
+    <button id='mobilebutton' onClick={()=>SetToggle(!toggle)}>X</button>
     {toggle && (
         <div>
             <span>
                 <Link to="/login">Login</Link>
-            <CgShoppingCart id='cart'/>
+            <Link to="/cart"><CgShoppingCart id='cart'/></Link>
 
             </span>
             
@@ -27,6 +49,7 @@ const Nav = ()=>{
 
 
             </span>
+          
             
         </div>
         
@@ -34,8 +57,8 @@ const Nav = ()=>{
     </div>
 
 
-        <div id="nav">
-            <div>
+    <div id="nav">
+            <div >
                 <img id='logo' src={logo}/>
             </div> 
             <div id="links" >
@@ -47,13 +70,27 @@ const Nav = ()=>{
             </div>
             <div id='links'>
             <Link to="/login">login</Link>
-            <CgShoppingCart id='cart'/>
+            <p id='cartnumber'>{cart.length}</p>
 
+            <Link to="/cart">Cart</Link>
+            <CgShoppingCart id='cart' onClick={()=>cartButton()}/>
+           
             </div>
 
 
         </div>
-    </div>
+        {carttog && (
+
+                <div id='cartprev'>
+                    <div>
+                      <CartCards cart={cart}/>
+                    </div>
+                    <p>Total: {price}</p>
+                    
+
+                </div>
+            )}
+        </div>
     )
 }
 
