@@ -61,7 +61,7 @@ const Home = ()=>{
                     <h1>Winter Colleciton 2024</h1>
                     <h2>Get ready for the deadly Winter with the new line for Move in Silence</h2>
                     <h3>Get 10% off with your puchcase </h3>
-                    <button id='bannerleftbutton'><Link id='shopnow' to='/browse'>Shop</Link></button>
+                    <button id='bannerleftbutton'><Link id='shopnow' to='./browse'>Shop</Link></button>
                 </div>
                 {/* <span id='bannerright'> */}
                     {/* <img src=""/> */}
@@ -71,16 +71,39 @@ const Home = ()=>{
             </div>
             {/* <Slider/> */}
         </div>
-        <div id='main'>
-            <span>
-            <p>Get 50 percent off your first purchase</p>
-            <button>Explore</button>
-            </span>
-            <span>
-            <p>Get 50 percent off your first purchase</p>
-            <button>Explore</button>
+       
+        <div id='new'>
+            <div>
 
+            </div>
+            
+
+  
+        <div >
+            <h1>New</h1>
+            <div id='scroll'>
+                
+            
+
+        
+            <img src={c1}/>
+            <img src={c2}/>
+            <img src={c3}/>
+            <img src={c4}/>
+            <img src={c1}/>
+            <img src={c1}/>
+            <img src={c2}/>
+            <img src={c3}/>
+            </div>
+        </div>
+        </div>
+        <div id='main'>
+            <span id='mid'>
+            <h1>The Movement</h1>
+            <p>To Move In Silence is a lifestyle that not everyone can live. The goal is to remain humble and prosper while others wonder from the outside looking in.</p>
+            <button>Explore</button>
             </span>
+            
           
         </div>
 

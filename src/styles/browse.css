@@ -4,6 +4,10 @@
     justify-content: center;
 }
 
+#cb{
+    width: 200px;
+}
+
 #category{
     
     display: flex;

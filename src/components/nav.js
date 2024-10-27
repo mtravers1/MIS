@@ -6,6 +6,8 @@ import { CgShoppingCart } from "react-icons/cg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Cart from "../data/cart";
+import { CiMenuBurger } from "react-icons/ci";
+
 import '../styles/cartcard.css'
 import { CartState } from "../context-reducer/context";
 import CartCards from "./cartCards";
@@ -26,19 +28,21 @@ const Nav = ()=>{
     })
     console.log(price)
     return(
-<div>
+<div id='m'>
     
     <div id="mobile">
-       
+        <div>
+        <button id='mobilebutton' onClick={()=>SetToggle(!toggle)}><CiMenuBurger /></button>
+
         <img id='mobileimg' onClick={()=>SetToggle(!toggle)} src={logo}/>
         <CgShoppingCart id='cart' onClick={()=>cartButton()}/>
 
-    <button id='mobilebutton' onClick={()=>SetToggle(!toggle)}>X</button>
+    </div>
     {toggle && (
         <div>
+
             <span>
                 <Link to="/login">Login</Link>
-            <Link to="/cart"><CgShoppingCart id='cart'/></Link>
 
             </span>
             
@@ -54,6 +58,7 @@ const Nav = ()=>{
         </div>
         
     )}
+    
     </div>
 
 

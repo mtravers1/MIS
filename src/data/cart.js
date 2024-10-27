@@ -26,6 +26,10 @@ const Cart = ()=>{
 
 
         <CartCards/>
+
+        <div>
+         <button>Continue Checkout</button>
+        </div>
         </div>
     )
 }

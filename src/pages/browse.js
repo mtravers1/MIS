@@ -24,7 +24,7 @@ const Browse = ()=>{
             <Nav/>
             <h1 style={{textAlign:'center'}}>Browse</h1>
             
-            <button onClick={()=>SetToggle(!toggle)}>Category</button>
+            <button id='cb' onClick={()=>SetToggle(!toggle)}>Category</button>
             {toggle && (
                 <div id='category'>
                     <p onClick={()=>SetCategory(hat)}>Hats</p>  
