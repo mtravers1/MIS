@@ -1,10 +1,10 @@
 import React from "react";
-import '../styles/login.css'
+import '../../styles/login.css'
 import { Link } from "react-router-dom";
-import logo from '../photos/MISLOGO.png'
+import logo from '../../photos/MISLOGO.png'
 import { useState } from "react";
 import { CgShoppingCart } from "react-icons/cg";
-import { CartState } from "../context-reducer/context";
+import { CartState } from "../../context-reducer/context";
 
 const Login = ()=>{
     const {state:{cart}, dispatch}=CartState()
@@ -67,7 +67,7 @@ const Login = ()=>{
 
             </div>
             <p>Sign Up For New Drop Info</p>
-            <Link to='/register'>sign up</Link>
+            <Link to='../auth/register'>sign up</Link>
                 <form  onSubmit={handleSubmit}>
                 <div id='log'>
                     <div id='email'>

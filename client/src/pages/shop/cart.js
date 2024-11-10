@@ -1,7 +1,7 @@
 import React from "react";
-import Nav from "../components/nav";
-import { CartState } from "../context-reducer/context";
-import CartCards from "../components/cartCards";
+import Nav from "../../components/nav";
+import { CartState } from "../../context-reducer/context";
+import CartCards from "../../components/cartCards";
 const Cart = ()=>{
 
     const {state:{cart}, dispatch}=CartState();

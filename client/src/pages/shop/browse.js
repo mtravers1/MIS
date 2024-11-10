@@ -1,9 +1,9 @@
 import React from "react";
-import product from "../data/data";
-import Nav from "../components/nav";
-import Card from "../components/card";
-import '../styles/browse.css'
-import Footer from "../components/footer";
+import product from "../../data/data";
+import Nav from "../../components/nav";
+import Card from "../../components/card";
+import '../../styles/browse.css'
+import Footer from "../../components/footer";
 import { useState } from "react";
 const Browse = ()=>{
     const [toggle, SetToggle]=useState(false)

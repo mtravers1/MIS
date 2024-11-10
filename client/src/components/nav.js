@@ -1,11 +1,11 @@
 import React from "react";
 import '../styles/nav.css'
 import logo from '../photos/MISLOGO.png'
-import Login from "../pages/login";
+import Login from "../pages/auth/login";
 import { CgShoppingCart } from "react-icons/cg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Cart from "../data/cart";
+import Cart from "../pages/shop/cart";
 import { CiMenuBurger } from "react-icons/ci";
 
 import '../styles/cartcard.css'

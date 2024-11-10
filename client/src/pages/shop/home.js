@@ -1,14 +1,14 @@
 import React from "react";
-import Nav from "../components/nav";
-import '../styles/home.css'
-import Slider from "../components/slider";
-import c1 from '../photos/c1.png'
-import c2 from '../photos/c2.png'
-import Login from "./login";
-import c3 from '../photos/c3.png'
-import c4 from '../photos/c4.jpg'
+import Nav from "../../components/nav";
+import '../../styles/home.css'
+import Slider from "../../components/slider";
+import c1 from '../../photos/c1.png'
+import c2 from '../../photos/c2.png'
+import Login from "../auth/login";
+import c3 from '../../photos/c3.png'
+import c4 from '../../photos/c4.jpg'
 import { Link } from "react-router-dom";
-import Footer from "../components/footer";
+import Footer from "../../components/footer";
 import axios from "axios";
 const Home = ()=>{
 
