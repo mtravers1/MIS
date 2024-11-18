@@ -42,14 +42,14 @@ const Nav = ()=>{
         <div>
 
             <span>
-                <Link to="/login">Login</Link>
+                <Link to="/auth/login">Login</Link>
 
             </span>
             
             <span>
-                <Link to="/">Home</Link>
-                <Link to='/browse'>Browse</Link>
-                <Link to='/about'>About</Link>
+                <Link to="/shop/home">Home</Link>
+                <Link to='/shop/browse'>Browse</Link>
+                <Link to='/shop/about'>About</Link>
 
 
             </span>
@@ -67,17 +67,17 @@ const Nav = ()=>{
                 <img id='logo' src={logo}/>
             </div> 
             <div id="links" >
-                <Link to="/">Home</Link>
-                <Link to="/browse">Browse</Link>
+                <Link to="/shop/home">Home</Link>
+                <Link to="/shop/browse">Browse</Link>
                 <Link to="">Deals</Link>
-                <Link to="/about">About</Link>
+                <Link to="/shop/about">About</Link>
                 <Link to="">Contact</Link>
             </div>
             <div id='links'>
-            <Link to="/login">login</Link>
+            <Link to="/auth/login">login</Link>
             <p id='cartnumber'>{cart.length}</p>
 
-            <Link to="/cart">Cart</Link>
+            <Link to="/shop/cart">Cart</Link>
             <CgShoppingCart id='cart' onClick={()=>cartButton()}/>
            
             </div>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=UnifrakturCook&display=swap');
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 body {
   margin: 0;
   font-family: "UnifrakturCook", cursive;

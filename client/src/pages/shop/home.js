@@ -73,13 +73,12 @@ const Home = ()=>{
         </div>
        
         <div id='new'>
-            <div>
-
-            </div>
+           
             
 
   
         <div >
+      
             <h1>New</h1>
             <div id='scroll'>
                 

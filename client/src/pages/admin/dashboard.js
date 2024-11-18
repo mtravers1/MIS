@@ -1,10 +1,11 @@
-const Dashboard =()=>{
+import React from 'react'
+const AdminDashboard =()=>{
+    console.log('dashboard')
     return(
         <div>
-            <h1 className="font-white"> Admin Dashboard</h1>
-
+            <h1 style={{color:'white'}}> Admin Dashboard</h1>
         </div>
     )
 }
 
-export default Dashboard
+export default AdminDashboard

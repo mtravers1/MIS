@@ -11,7 +11,7 @@ const CartCards= (props)=>{
      })
     return(
         <div>
-            <Link to='/cart'>View Cart</Link>
+            <Link to='/shop/cart'>View Cart</Link>
              {
                             cart.map((c)=>(
                                 <div id='cartcard'>
