@@ -24,7 +24,7 @@ function App() {
   // const isAuthenticated=false
   // const user={
   //   name:'mike',
-  //   role:'user'
+  //   role:'admin'
   // }
 
 

@@ -1,11 +1,12 @@
 import React from 'react'
 import { Menu } from 'lucide-react';
 import { LogOut } from 'lucide-react';
-import { useState } from 'react';
-export default function AdminHeader({setOpen }) {
+export default function AdminHeader ({ updateLayout }) {
+   
+     
   return (
     <header className='flex items-center justify-between px-4 py-3 bg-background border-bottom'>
-      <button onClick={setOpen(true)} className='lg:hidden sm:block'>
+      <button  className='lg:hidden sm:block'>
         <Menu/>
         <span className='sr-only'>
             Toggle Menu
