@@ -3,11 +3,12 @@
 import { FileIcon, UploadCloudIcon, XIcon } from 'lucide-react'
 import { Fragment, useRef, useState} from 'react'
 import { useDispatch } from 'react-redux'
-import getAllProducts from '../../reduxstore/admin/products-slice'
-import addNewProduct from '../../reduxstore/admin/products-slice'
+import {getAllProducts} from '../../reduxstore/admin/products-slice'
+import {addNewProduct} from '../../reduxstore/admin/products-slice'
 import axios from 'axios'
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import ProductTitle from '../../components/admin/product-title'
 // import ProductImageUpload from '../..image-upload'
 const initialFormData={
     image:null,
@@ -27,7 +28,7 @@ const AdminProducts = ()=>{
     const { productList } = adminProductsState;
    const dispatch=useDispatch()
     useEffect(()=>{
-    dispatch(getAllProducts)
+    dispatch(getAllProducts())
         
     },[dispatch])
     const [openCreateProductsDialog, setOpenCreateProductsDialog]=useState(null)
@@ -42,8 +43,16 @@ const AdminProducts = ()=>{
             image:uploadedImageUrl
         })).then((data)=>{
             console.log(data)
+            if(data?.payload?.success){
+                dispatch(getAllProducts())
+                setImageFile(null)
+                setFormData(initialFormData)
+
+            }
         })
+        
     }
+    console.log(addNewProduct)
      const addProductFormElements = [
         {
           label: "Title",
@@ -110,10 +119,10 @@ const AdminProducts = ()=>{
     const [uploadedImageUrl, setUploadedImageUrl]=useState('')
     const inputRef = useRef(null)
     const handleImageFileChange = (e)=>{
-        console.log(e.target.files)
         const selectedFile= e.target.files?.[0]
         if(selectedFile){
             setImageFile(selectedFile)
+            console.log(selectedFile)
         }
     }
 
@@ -145,14 +154,15 @@ async function uploadImageToCloudinary(){
 }
     return(
         <Fragment>
-            <div className="mb-5 w-full flex justify-end">
-                <button className="">
-                   Add Products
-                </button>
-            </div>
+            <div className="mb-5 w-full flex ">
             <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4">
-
+            {
+                productList && productList.length>0 ?
+                productList.map(products=><ProductTitle  product={products}/>) : null
+            }     
             </div>
+            </div>
+          
             <button onClick={()=>open()}>
                 button
 

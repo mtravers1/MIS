@@ -6,7 +6,7 @@ const initialState={
     productList:[]
 }
 
-const addNewProduct = createAsyncThunk('/products/addnewproduct', async(formData)=>{
+export const addNewProduct = createAsyncThunk('/products/addnewproduct', async(formData)=>{
     const result=await axios.post('http://localhost:5000/api/admin/products/add', formData,{
         headers:{
             'Content-Type':'application/json'
@@ -14,7 +14,7 @@ const addNewProduct = createAsyncThunk('/products/addnewproduct', async(formData
     })
      return result?.data
 } )
-const getAllProducts = createAsyncThunk('/products/getAllProducts', async()=>{
+export const getAllProducts = createAsyncThunk('/products/getAllProducts', async()=>{
     try{
         const result=await axios.get('http://localhost:5000/api/admin/products/get')
         return result?.data
