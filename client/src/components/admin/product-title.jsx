@@ -1,6 +1,13 @@
 import React from 'react'
 
-function ProductTitle({product}) {
+function ProductTitle({product, currentEditedId, setCurrentEditedId, setFormData, setOpenCreateProductsDialog, handleDelete}) {
+
+    // const editProduct=()=>{
+    //     setCurrentEditedId(product?._id)
+    //     console.log(product?._id)
+    // }
+
+
   return (
     <div clasName="w-full max-w-sm mx-auto">
         <div clasName="relative">
@@ -17,8 +24,15 @@ function ProductTitle({product}) {
                 </div>
             </div>
             <div clasName="flex justify-between items-center">
-                <button>Edit</button>
-                <button>Delete</button>
+                <button onClick={()=>{
+   setOpenCreateProductsDialog(true)
+   setCurrentEditedId(product?._id)
+   setFormData(product)
+                }
+
+                 
+                } >Edit</button>
+                <button onClick={()=>handleDelete(product?._id)}>Delete</button>
             </div>
 
         </div>

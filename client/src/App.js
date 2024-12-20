@@ -20,11 +20,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { checkAuth } from './reduxstore/authslice';
 import Products from './pages/admin/products';
 import AdminProducts from './pages/admin/products';
+import Listing from './pages/shop/listing';
+import Account from './pages/shop/account';
 function App() {
-  // const isAuthenticated=false
+  // const isAuthenticated=true
   // const user={
   //   name:'mike',
-  //   role:'admin'
+  //   role:'user'
   // }
 
 
@@ -77,12 +79,15 @@ function App() {
         <ShopLayout/>
    </CheckAuth>
   }>
+         <Route path='listing' element={<Listing/>}/>
+
 
     <Route path='home' element={<Home/>}/>
     <Route path='browse' element={<Browse/>}/>
     <Route path='about' element={<About/>}/>
-     <Route path='cart' element={<Cart/>}/>
-        
+    <Route path='cart' element={<Cart/>}/>
+    <Route path='account' element={<Account/>}/>
+    
    
       </Route> 
     {/* <Route path='/' element={<Home/>}/>

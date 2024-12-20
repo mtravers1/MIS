@@ -3,12 +3,14 @@
 import { FileIcon, UploadCloudIcon, XIcon } from 'lucide-react'
 import { Fragment, useRef, useState} from 'react'
 import { useDispatch } from 'react-redux'
-import {getAllProducts} from '../../reduxstore/admin/products-slice'
+import {deleteProducts, getAllProducts} from '../../reduxstore/admin/products-slice'
 import {addNewProduct} from '../../reduxstore/admin/products-slice'
 import axios from 'axios'
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import ProductTitle from '../../components/admin/product-title'
+import { current } from '@reduxjs/toolkit'
+import {editProduct} from '../../reduxstore/admin/products-slice'
 // import ProductImageUpload from '../..image-upload'
 const initialFormData={
     image:null,
@@ -26,7 +28,12 @@ const initialFormData={
 const AdminProducts = ()=>{
     const adminProductsState = useSelector((state) => state.adminProducts);
     const { productList } = adminProductsState;
-   const dispatch=useDispatch()
+    function isFormValid(){
+        return Object.keys(formData).map(key=>formData[key] !== '').every(item=>item)
+    }
+
+
+    const dispatch=useDispatch()
     useEffect(()=>{
     dispatch(getAllProducts())
         
@@ -38,6 +45,20 @@ const AdminProducts = ()=>{
     }
     const onSubmit=(e)=>{
         e.preventDefault()
+        currentEditedId !== null ? 
+        dispatch(editProduct({
+            id:currentEditedId,formData
+        })).then((data)=>{
+            // console.log(data,'edited')
+            if(data?.payload?.success){
+                dispatch(getAllProducts())
+                setFormData(initialFormData)
+                setOpenCreateProductsDialog(false)
+                setCurrentEditedId(null)
+            }
+        }
+      
+        ):
         dispatch(addNewProduct({
             ...formData,
             image:uploadedImageUrl
@@ -45,12 +66,21 @@ const AdminProducts = ()=>{
             console.log(data)
             if(data?.payload?.success){
                 dispatch(getAllProducts())
+                setOpenCreateProductsDialog(false);
                 setImageFile(null)
                 setFormData(initialFormData)
 
             }
         })
         
+    }
+    const handleDelete = (getCurrentProductId)=>{
+        console.log(getCurrentProductId)
+        dispatch(deleteProducts(getCurrentProductId)).then(data=>{
+            if(data?.payload.success){
+                dispatch(getAllProducts())
+            }
+        })
     }
     console.log(addNewProduct)
      const addProductFormElements = [
@@ -117,6 +147,7 @@ const AdminProducts = ()=>{
     const [formData, setFormData]=useState(initialFormData)
     const [imageFile, setImageFile]=useState(null)
     const [uploadedImageUrl, setUploadedImageUrl]=useState('')
+    const [currentEditedId, setCurrentEditedId]=useState(null)
     const inputRef = useRef(null)
     const handleImageFileChange = (e)=>{
         const selectedFile= e.target.files?.[0]
@@ -142,6 +173,7 @@ const handleRemoveImage=()=>{
     }
 }
 
+console.log(formData)
 useEffect(()=>{
     if(imageFile!==null) uploadImageToCloudinary()
 }, [imageFile])
@@ -158,19 +190,35 @@ async function uploadImageToCloudinary(){
             <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-4">
             {
                 productList && productList.length>0 ?
-                productList.map(products=><ProductTitle  product={products}/>) : null
+                productList.map(products=>
+                <ProductTitle 
+                    setFormData={setFormData}
+                    setOpenCreateProductsDialog={setOpenCreateProductsDialog}
+                    currentEditedId={currentEditedId} 
+                    setCurrentEditedId={setCurrentEditedId}
+                    handleDelete={handleDelete}
+
+                 product={products}/>) : null
+                
             }     
             </div>
             </div>
           
-            <button onClick={()=>open()}>
-                button
-
+            <button 
+            setCurrentEditedId={productList?._id}
+            setFormData={productList}
+            onClick={()=>open() }>
+                Add New Product
+                
             </button>
             {openCreateProductsDialog &&(
                 <div className="overflow-auto">
-                    Adding the new products
                     <div className="py-6  w-1/3">
+                    {
+                        currentEditedId !== null ? 
+                        'Edit Product': 'Add new Product'
+                }
+
                     <form onSubmit={onSubmit}>
                         {/* <ProductImageUpload/> */}
 

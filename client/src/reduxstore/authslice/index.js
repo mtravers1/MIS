@@ -3,7 +3,7 @@ import axios from "axios";
 
 const initialState = {
   isAuthenticated: false,
-  isLoading: false,
+  isLoading: true,
   user: null,
 };
 export const loginUser = createAsyncThunk(
@@ -19,6 +19,22 @@ export const loginUser = createAsyncThunk(
       console.error("Registration failed:", error); // Log the error
       return rejectWithValue(error.response?.data || error.message);
     }
+  }
+);
+
+export const logoutUser = createAsyncThunk(
+  "/auth/logout",
+
+  async () => {
+    const response = await axios.post(
+      "http://localhost:5000/api/auth/logout",
+      {},
+      {
+        withCredentials: true,
+      }
+    );
+
+    return response.data;
   }
 );
 
@@ -99,7 +115,6 @@ const authSlice = createSlice({
           state.user = null;
           state.isAuthenticated = false;
         })
-
         .addCase(checkAuth.pending, (state) => {
           state.isLoading = true;
         })
@@ -110,6 +125,11 @@ const authSlice = createSlice({
           state.isAuthenticated = action.payload.success ;
         })
         .addCase(checkAuth.rejected, (state, action) => {
+          state.isLoading = false;
+          state.user = null;
+          state.isAuthenticated = false;
+        })
+        .addCase(logoutUser.fulfilled, (state, action) => {
           state.isLoading = false;
           state.user = null;
           state.isAuthenticated = false;

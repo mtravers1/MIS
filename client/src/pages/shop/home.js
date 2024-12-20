@@ -43,6 +43,7 @@ const Home = ()=>{
     // fetch(url).then(res=>res.json()).then(data=>console.log(data))
     return(
         <div className="App">
+            {/* <Link to='shop'>Shop</Link> */}
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
