@@ -9,9 +9,9 @@ import React from 'react'
         </div> 
         <div>
             {
-                Object.keys(filterOptions).map((filter)=>(
+                Object.keys(filterOptions).map((filter,k)=>(
                     <>
-                    <div className='border-b-2 mb-4'>
+                    <div  key={filter.id} className='border-b-2 mb-4'>
                         <h3 className='text-base font-bold'>{filter}</h3>
                         <div className='grid gap-2 mt-2'>
                             {filterOptions[filter].map((f)=>(

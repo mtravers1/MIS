@@ -1,4 +1,4 @@
-import { Button } from '@/ui/button'
+import { Button } from '../../ui/button'
 import React from 'react'
 
 function Productcard({product}) {
@@ -20,7 +20,7 @@ function Productcard({product}) {
 
                 </div>
                 <div className='flex justify-between items-center mb-2'>
-                    <span className={`${product?.saleprice >0?'line-through':''} text-lg font-semibold text-primary`}>{product?.price}</span>
+                    <span className={`${product?.saleprice >0?'line-through':''} text-lg font-semibold text-primary`}>${product?.price}</span>
                     <span className='text-sm text-muted-foreground'>{product?.brand}</span>
 
                 </div>
